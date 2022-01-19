@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.RegistrationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <NavigationPage.TitleView>
+        <Label
+            Padding="70,0"
+            FontSize="21"
+            Text="Регистрация"
+            TextColor="White"
+            VerticalOptions="CenterAndExpand" />
+    </NavigationPage.TitleView>
+
+    <StackLayout Padding="50,30" Spacing="60">
+        <Entry x:Name="EmailRegEntry" Placeholder="E-mail" />
+        <Entry x:Name="LoginRegEntry" Placeholder="Логин" />
+        <Entry x:Name="PassRegEntry" Placeholder="Пароль" />
+        <Entry x:Name="PassConfirmRegEntry" Placeholder="Пароль" />
+        <Button
+            x:Name="RegBtn"
+            Clicked="RegBtn_Clicked"
+            Text="Зарегистрироваться"
+            TextTransform="None" />
+    </StackLayout>
+</ContentPage>
