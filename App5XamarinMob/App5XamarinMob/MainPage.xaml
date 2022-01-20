@@ -43,7 +43,8 @@
             SeparatorColor="Gray">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" TextColor="#000" />
+                    <TextCell Text="{Binding Name}" TextColor="#000"  />
+                    <!--<Label Text="{Binding Name}" TextColor="#000" FontSize="16"></Label>-->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

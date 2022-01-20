@@ -5,17 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using App5XamarinMob.Models;
 
 namespace App5XamarinMob
 {
     public partial class MainPage : ContentPage
     {
-        public List<Project> Projects;
         public MainPage()
         {
             InitializeComponent();
-            Projects = new List<Project>() { new Project("Проект1"), new Project("Проект2"), new Project("Проект3"), new Project("Проект4"), new Project("Проект5"), new Project("Проект6") };
-            //ProjectsLstview.ItemsSource = Projects;
             UpdateList();
         }
 
@@ -26,26 +24,15 @@ namespace App5XamarinMob
 
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("asdasd", "asdasd", "asdasd");
-            Projects.Add(new Project($"Проект {Projects.Count + 1}"));
+            List.Projects.Add(new Project($"Проект{List.Projects.Count + 1}", $"Description{List.Projects.Count + 1}", "89047182492", "89047182402", "qwerty@mail.com", "Kazan"));
             UpdateList();
         }
 
-
         void UpdateList()
         {
-            ProjectsLstview.ItemsSource = Projects;
+            ProjectsLstview.ItemsSource = null;
+            ProjectsLstview.ItemsSource = List.Projects;
 
         }
-    }
-
-    public class Project
-    {
-        public Project(string name)
-        {
-            Name = name;
-        }
-
-        public string Name { get; set; }
     }
 }

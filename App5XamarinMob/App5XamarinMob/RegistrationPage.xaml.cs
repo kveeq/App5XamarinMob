@@ -19,7 +19,7 @@ namespace App5XamarinMob
 
         private async void RegBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
         }
     }
 }

@@ -2,23 +2,30 @@
 <ContentPage
     x:Class="App5XamarinMob.Login"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App5XamarinMob">
     <StackLayout Margin="60,20" Spacing="30">
         <Image
             x:Name="IconLoginImg"
             Margin="0,0,0,20"
             Aspect="AspectFit"
             Scale="0.9"
-            Source="image.png" />
+            Source="Resources/image.png" />
         <StackLayout Spacing="50">
-            <Entry
-                x:Name="LoginEntry"
-                Placeholder="Логин"
-                VerticalOptions="CenterAndExpand" />
-            <Entry
-                x:Name="PasswordEntry"
-                Placeholder="Пароль"
-                VerticalOptions="CenterAndExpand" />
+            <Frame BorderColor="#000">
+                <Entry
+                    x:Name="LoginEntry"
+                    Margin="-20,-25"
+                    Placeholder="Логин"
+                    VerticalOptions="CenterAndExpand" />
+            </Frame>
+            <Frame BorderColor="#000">
+                <Entry
+                    x:Name="PasswordEntry"
+                    Margin="-20,-25"
+                    Placeholder="Пароль"
+                    VerticalOptions="CenterAndExpand" />
+            </Frame>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Button

@@ -14,6 +14,7 @@ namespace App5XamarinMob
         public Login()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void RigistrationPageBtn_Clicked(object sender, EventArgs e)
