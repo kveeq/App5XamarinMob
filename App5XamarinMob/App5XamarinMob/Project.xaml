@@ -16,17 +16,27 @@
     </NavigationPage.TitleView>
 
     <ContentPage Title="О проекте">
-        <StackLayout>
-            <Label
-                Padding="20"
-                FontAttributes="Bold"
-                FontSize="21"
-                HorizontalOptions="CenterAndExpand"
-                Text="Описание:"
-                TextTransform="Uppercase"
-                VerticalOptions="Start" />
-            <Label x:Name="ProjectDescriptionLbl" Text="" TextTransform="Uppercase" />
-        </StackLayout>
+        <ScrollView Padding="0, 0">
+            <StackLayout>
+                <Label
+                    Padding="20"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    FontSize="18"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Описание:"
+                    TextTransform="Uppercase"
+                    VerticalOptions="Start" />
+                <Label
+                    x:Name="ProjectDescriptionLbl"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    HorizontalTextAlignment="Center"
+                    Text=""
+                    TextColor="Black"
+                    TextTransform="Uppercase" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
 
     <ContentPage Title="Картинки">
@@ -74,30 +84,26 @@
         <StackLayout Margin="50">
             <StackLayout>
                 <Label Text="Телефон" />
-                <Frame BorderColor="#000" BackgroundColor="LightGray">
-                    <Label
-                        x:Name="TelephoneNumberLbl1"/>
+                <Frame BackgroundColor="LightGray" BorderColor="#000">
+                    <Label x:Name="TelephoneNumberLbl1" />
                 </Frame>
             </StackLayout>
             <StackLayout>
                 <Label Text="Телефон" />
-                <Frame BorderColor="#000" BackgroundColor="LightGray">
-                    <Label
-                        x:Name="TelephoneNumberLbl2" />
+                <Frame BackgroundColor="LightGray" BorderColor="#000">
+                    <Label x:Name="TelephoneNumberLbl2" />
                 </Frame>
             </StackLayout>
             <StackLayout>
                 <Label Text="Email" />
-                <Frame BorderColor="#000" BackgroundColor="LightGray">
-                    <Label
-                        x:Name="EmailLbl"/>
+                <Frame BackgroundColor="LightGray" BorderColor="#000">
+                    <Label x:Name="EmailLbl" />
                 </Frame>
             </StackLayout>
             <StackLayout>
                 <Label Text="Адрес" />
-                <Frame BorderColor="#000" BackgroundColor="LightGray">
-                    <Label
-                        x:Name="AddressLbl"/>
+                <Frame BackgroundColor="LightGray" BorderColor="#000">
+                    <Label x:Name="AddressLbl" />
                 </Frame>
             </StackLayout>
         </StackLayout>
