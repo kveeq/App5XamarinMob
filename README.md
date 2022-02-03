@@ -1,3 +1,4 @@
+![GitLab Release (custom instance)](https://img.shields.io/gitlab/v/release/GNOME/librsvg?color=g&date_order_by=created_at&gitlab_url=https%3A%2F%2Fgitlab.gnome.org&include_prereleases&label=Alpha&sort=semver)
 # Кросс-платформенное приложение APLUS
 ## Написано на языке программирования **C#** на фреймворке **Xamarin**
 
@@ -5,7 +6,7 @@
 ___
 
 #### **Задачи для реализации:**
-- [ ] Верстка по макету
+- [ ] Верстка по [макету](https://www.figma.com/file/gYUrlGMMYLt883DxAlqstC/projects?node-id=650%3A2)
   - [x] Страница логина
   - [x] Страница регистрации
   - [x] Страница списка проектов
@@ -19,4 +20,4 @@ ___
   - [ ]  Добавление в базу данных
 ___
   
-Приложение написано на платформе Xamarin.Forms на языке программирования C# в учебное время. Для улучшения интерфейса используется библиотека ```Xamarin.Form.Visual.Material``` версиии 5.0.0.2012. 
+Приложение написано на платформе Xamarin.Forms на языке программирования C# в учебное время. Для улучшения интерфейса используется библиотека ```Xamarin.Form.Visual.Material``` версиии 5.0.0.2012.
