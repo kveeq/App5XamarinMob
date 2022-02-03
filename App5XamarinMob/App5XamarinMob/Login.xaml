@@ -3,8 +3,8 @@
     x:Class="App5XamarinMob.Login"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:App5XamarinMob">
-    <StackLayout Margin="60,20" Spacing="30">
+    xmlns:local="clr-namespace:App5XamarinMob" Visual="Material">
+    <StackLayout Margin="40,20" Spacing="50">
         <Image
             x:Name="IconLoginImg"
             Margin="0,0,0,20"
@@ -30,11 +30,15 @@
         <StackLayout Orientation="Horizontal">
             <Button
                 x:Name="RigistrationPageBtn"
+                CornerRadius="20"
+                BackgroundColor="DeepSkyBlue"
                 Clicked="RigistrationPageBtn_Clicked"
                 HorizontalOptions="Start"
                 Text="Зарегистрироваться" />
             <Button
                 x:Name="LoginBtn"
+                CornerRadius="20"
+                BackgroundColor="DeepSkyBlue"
                 Clicked="LoginBtn_Clicked"
                 HorizontalOptions="EndAndExpand"
                 Text="Войти" />

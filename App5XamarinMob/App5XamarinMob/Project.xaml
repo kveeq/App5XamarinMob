@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:App5XamarinMob.TabbedPages"
-    xmlns:locala="clr-namespace:App5XamarinMob">
+    xmlns:locala="clr-namespace:App5XamarinMob" Visual="Material">
 
     <NavigationPage.TitleView>
         <Label
