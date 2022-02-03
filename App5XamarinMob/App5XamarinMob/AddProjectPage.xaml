@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.AddProjectPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Visual="Material">
+
+    <NavigationPage.TitleView>
+        <Label
+            Padding="70,0"
+            FontSize="21"
+            Text="Создать проект"
+            TextColor="White"
+            TextTransform="None"
+            VerticalOptions="CenterAndExpand" />
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <StackLayout Spacing="30" Margin="20, 30">
+            <Entry BackgroundColor="LightGray" Placeholder="Имя проекта"/>
+            <Editor BackgroundColor="LightGray" Placeholder="Описание"/>
+            <Entry BackgroundColor="LightGray" Placeholder="Номер телефона №1"/>
+            <Entry BackgroundColor="LightGray" Placeholder="Номер телефона №2"/>
+            <Entry BackgroundColor="LightGray" Placeholder="Email" />
+            <Entry BackgroundColor="LightGray" Placeholder="Адрес" />
+            <StackLayout Orientation="Horizontal">
+                <Button
+                x:Name="CancelBtn"
+                CornerRadius="20"
+                BackgroundColor="DeepSkyBlue"
+                HorizontalOptions="Start"
+                Text="Отмена" />
+                <Button
+                x:Name="AddBtn"
+                CornerRadius="20"
+                BackgroundColor="DeepSkyBlue"
+                HorizontalOptions="EndAndExpand"
+                Text="Добавить" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
