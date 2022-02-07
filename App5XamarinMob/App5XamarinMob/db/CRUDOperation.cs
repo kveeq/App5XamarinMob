@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using App5XamarinMob.Models;
 using System.Text;
 
 namespace App5XamarinMob.db
@@ -11,21 +12,21 @@ namespace App5XamarinMob.db
         public CRUDOperation(string databasePath)
         {
             db = new SQLiteConnection(databasePath);
-            db.CreateTable<ProjectModel>();
+            db.CreateTable<Project>();
         }
-        public IEnumerable<ProjectModel> GetProjects()
+        public IEnumerable<Project> GetProjects()
         {
-            return db.Table<ProjectModel>();
+            return db.Table<Project>();
         }
 
-        public ProjectModel GetProjectItem(int id)
+        public Project GetProjectItem(int id)
         {
-            return db.Get<ProjectModel>(id);
+            return db.Get<Project>(id);
         }
 
-        public int DelProj(int id) { return db.Delete<ProjectModel>(id); }
+        public int DelProj(int id) { return db.Delete<Project>(id); }
 
-        public int SaveItem(ProjectModel projectModel)
+        public int SaveItem(Project projectModel)
         {
             if (projectModel.Id != 0)
             {

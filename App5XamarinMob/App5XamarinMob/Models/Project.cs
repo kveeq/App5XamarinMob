@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace App5XamarinMob.Models
 {
+    [Table("Project")]
     public class Project
     {
         public Project(string name, string description, string telephoneNumber1, string telephoneNumber2, string email, string address)
@@ -16,6 +18,14 @@ namespace App5XamarinMob.Models
             Address = address;
         }
 
+        public Project()
+        {
+
+        }
+
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        [Unique]
         public string Name { get; set; }
         public string Description { get; set; }
         public string TelephoneNumber1 { get; set; }

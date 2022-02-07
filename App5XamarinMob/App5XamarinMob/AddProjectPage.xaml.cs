@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App5XamarinMob.Models;
+using App5XamarinMob.db;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,6 +29,8 @@ namespace App5XamarinMob
             List.Projects.Add(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, TelNumber2Txt.Text, EmailTxt.Text, AddressTxt.Text));
 
             await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+
+            App.db.SaveItem(new Project());
         }
     }
 }

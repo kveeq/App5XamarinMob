@@ -34,7 +34,7 @@ namespace App5XamarinMob
 
         private void ProjectEditNavBtn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new EditProjectPage());
+            Navigation.PushAsync(new EditProjectPage(project));
         }
     }
 }

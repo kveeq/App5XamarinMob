@@ -33,6 +33,7 @@
                 Placeholder="Имя проекта" />
             <Editor
                 x:Name="ProjectDescriptionTxt"
+                AutoSize="TextChanges"
                 BackgroundColor="LightGray"
                 Placeholder="Описание" />
             <Entry
