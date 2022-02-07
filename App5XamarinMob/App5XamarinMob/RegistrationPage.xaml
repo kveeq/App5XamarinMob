@@ -41,6 +41,8 @@
         <Button
             x:Name="RegBtn"
             Clicked="RegBtn_Clicked"
+            BackgroundColor="DeepSkyBlue"
+            CornerRadius="20"
             Text="Зарегистрироваться"
             TextTransform="None" />
     </StackLayout>

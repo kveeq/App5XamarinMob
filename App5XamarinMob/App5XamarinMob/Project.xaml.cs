@@ -31,5 +31,10 @@ namespace App5XamarinMob
             TelephoneNumberLbl2.Text = project.TelephoneNumber2;
             TelephoneNumberLbl1.Text = project.TelephoneNumber1;
         }
+
+        private void ProjectEditNavBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EditProjectPage());
+        }
     }
 }
