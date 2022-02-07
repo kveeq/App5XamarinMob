@@ -14,6 +14,9 @@ namespace App5XamarinMob
         public MainPage()
         {
             InitializeComponent();
+            //App.db.SaveItem(new Project("111", "fmkrfmeofm", "0032-390392-23", "3920490-4904902", "imkwml", "fmkfmr"));
+            //App.db.SaveItem(new Project("222", "fmkrfmeofm", "0032-390392-23", "3920490-4904902", "imkwml", "fmkfmr"));
+            //App.db.SaveItem(new Project("333", "fmkrfmeofm", "0032-390392-23", "3920490-4904902", "imkwml", "fmkfmr"));
             UpdateList();
         }
 
@@ -43,6 +46,10 @@ namespace App5XamarinMob
         {
             ProjectsLstview.ItemsSource = null;
             ProjectsLstview.ItemsSource = List.Projects;
+            //foreach (var item in App.db.GetProjects())
+            //{
+            //    DisplayAlert("fff", item.Name, "ok");
+            //}
         }
     }
 }

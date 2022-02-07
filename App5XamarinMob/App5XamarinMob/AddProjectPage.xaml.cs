@@ -30,7 +30,7 @@ namespace App5XamarinMob
 
             await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
 
-            App.db.SaveItem(new Project());
+            //App.db.SaveItem(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, TelNumber2Txt.Text, EmailTxt.Text, AddressTxt.Text));
         }
     }
 }

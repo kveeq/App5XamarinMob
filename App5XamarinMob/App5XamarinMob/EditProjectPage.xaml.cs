@@ -31,9 +31,11 @@ namespace App5XamarinMob
             AddressTxt.Text = project.Address;
         }
 
-        private void ProjectDeleteNavBtn_Clicked(object sender, EventArgs e)
+        private async void ProjectDeleteNavBtn_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "Ок");
+            await DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "Ок");
+            await Navigation.PopAsync();
+            //App.db.DelProj(project.Id);
         }
 
         private async void CancelBtn_Clicked(object sender, EventArgs e)
@@ -41,9 +43,17 @@ namespace App5XamarinMob
             await Navigation.PopAsync();
         }
 
-        private void EditBtn_Clicked(object sender, EventArgs e)
+        private async void EditBtn_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "Ок");
+            await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "Ок");
+            project.Name = ProjectNameTxt.Text;
+            project.Description = ProjectDescriptionTxt.Text;
+            project.TelephoneNumber1 = TelNumber1Txt.Text;
+            project.TelephoneNumber2 = TelNumber2Txt.Text;
+            project.Address = AddressTxt.Text;
+            project.Email = EmailTxt.Text;
+            await Navigation.PopAsync();
+            //App.db.SaveItem(project);
         }
     }
 }

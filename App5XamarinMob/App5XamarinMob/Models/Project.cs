@@ -5,7 +5,7 @@ using System.Text;
 
 namespace App5XamarinMob.Models
 {
-    [Table("Project")]
+    [Table("Project1")]
     public class Project
     {
         public Project(string name, string description, string telephoneNumber1, string telephoneNumber2, string email, string address)
