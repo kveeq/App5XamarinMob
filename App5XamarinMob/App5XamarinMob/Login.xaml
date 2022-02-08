@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:App5XamarinMob" Visual="Material">
-    <StackLayout Margin="40,20" Spacing="50">
+    <StackLayout Margin="30,20" Spacing="50" VerticalOptions="Start">
         <Image
             x:Name="IconLoginImg"
             Margin="0,0,0,20"
@@ -27,7 +27,7 @@
                     VerticalOptions="CenterAndExpand" />
             </Frame>
         </StackLayout>
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
             <Button
                 x:Name="RigistrationPageBtn"
                 CornerRadius="20"
@@ -40,7 +40,7 @@
                 CornerRadius="20"
                 BackgroundColor="DeepSkyBlue"
                 Clicked="LoginBtn_Clicked"
-                HorizontalOptions="EndAndExpand"
+                HorizontalOptions="End"
                 Text="Войти" />
         </StackLayout>
     </StackLayout>

@@ -26,16 +26,26 @@ namespace App5XamarinMob
             ProjectNameTxt.Text = project.Name;
             ProjectDescriptionTxt.Text = project.Description;
             TelNumber1Txt.Text = project.TelephoneNumber1;
-            TelNumber2Txt.Text = project.TelephoneNumber2;
             EmailTxt.Text = project.Email;
             AddressTxt.Text = project.Address;
         }
 
         private async void ProjectDeleteNavBtn_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "Ок");
-            await Navigation.PopAsync();
-            //App.db.DelProj(project.Id);
+            bool result = await DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "Ок", "Отмена");
+            if (result)
+            {
+                try
+                {
+                    App.db.DelProj(project.Id);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+                }
+
+                await Navigation.PopAsync();
+            }
         }
 
         private async void CancelBtn_Clicked(object sender, EventArgs e)
@@ -45,15 +55,26 @@ namespace App5XamarinMob
 
         private async void EditBtn_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "Ок");
-            project.Name = ProjectNameTxt.Text;
-            project.Description = ProjectDescriptionTxt.Text;
-            project.TelephoneNumber1 = TelNumber1Txt.Text;
-            project.TelephoneNumber2 = TelNumber2Txt.Text;
-            project.Address = AddressTxt.Text;
-            project.Email = EmailTxt.Text;
-            await Navigation.PopAsync();
-            //App.db.SaveItem(project);
+            bool result = await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "Ok", "Отмена");
+            if (result)
+            {
+                project.Name = ProjectNameTxt.Text;
+                project.Description = ProjectDescriptionTxt.Text;
+                project.TelephoneNumber1 = TelNumber1Txt.Text;
+                project.Address = AddressTxt.Text;
+                project.Email = EmailTxt.Text;
+
+                try
+                {
+                    App.db.SaveItem(project);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+                }
+
+                await Navigation.PopAsync();
+            }
         }
     }
 }

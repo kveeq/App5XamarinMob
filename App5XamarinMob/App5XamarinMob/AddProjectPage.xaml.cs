@@ -26,11 +26,18 @@ namespace App5XamarinMob
 
         private async void AddBtn_Clicked(object sender, EventArgs e)
         {
-            List.Projects.Add(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, TelNumber2Txt.Text, EmailTxt.Text, AddressTxt.Text));
+            List.Projects.Add(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
 
-            await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+            try
+            {
+                App.db.SaveItem(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+            }
+            await Navigation.PopAsync();
 
-            //App.db.SaveItem(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, TelNumber2Txt.Text, EmailTxt.Text, AddressTxt.Text));
         }
     }
 }

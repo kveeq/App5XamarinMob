@@ -95,31 +95,16 @@
     </ContentPage>
 
     <ContentPage Title="Контакты">
-        <StackLayout Margin="50">
-            <StackLayout>
-                <Label Text="Телефон" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="TelephoneNumberLbl1" />
-                </Frame>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Телефон" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="TelephoneNumberLbl2" />
-                </Frame>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Email" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="EmailLbl" />
-                </Frame>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Адрес" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="AddressLbl" />
-                </Frame>
-            </StackLayout>
+        <StackLayout Margin="50" Spacing="50">
+            <Frame BackgroundColor="LightGray" >
+                <Label x:Name="TelephoneNumberLbl1" />
+            </Frame>
+            <Frame BackgroundColor="LightGray" >
+                <Label x:Name="EmailLbl" />
+            </Frame>
+            <Frame BackgroundColor="LightGray" >
+                <Label x:Name="AddressLbl" />
+            </Frame>
         </StackLayout>
     </ContentPage>
 

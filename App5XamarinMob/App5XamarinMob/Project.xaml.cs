@@ -15,6 +15,12 @@ namespace App5XamarinMob
         Project project;
         public static string Name;
 
+        protected override void OnAppearing()
+        {
+            FillInfo();
+            base.OnAppearing();
+        }
+
         public ProjectPage(Project project)
         {
             this.project = project;
@@ -28,7 +34,6 @@ namespace App5XamarinMob
             ProjectDescriptionLbl.Text = project.Description;
             AddressLbl.Text = project.Address;
             EmailLbl.Text = project.Email;
-            TelephoneNumberLbl2.Text = project.TelephoneNumber2;
             TelephoneNumberLbl1.Text = project.TelephoneNumber1;
         }
 

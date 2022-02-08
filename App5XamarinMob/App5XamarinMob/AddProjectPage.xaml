@@ -30,10 +30,6 @@
                 BackgroundColor="LightGray"
                 Placeholder="Номер телефона №1" />
             <Entry
-                x:Name="TelNumber2Txt"
-                BackgroundColor="LightGray"
-                Placeholder="Номер телефона №2" />
-            <Entry
                 x:Name="EmailTxt"
                 BackgroundColor="LightGray"
                 Placeholder="Email" />
