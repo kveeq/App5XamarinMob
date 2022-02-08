@@ -30,11 +30,13 @@
             <Entry
                 x:Name="PassRegEntry"
                 Margin="-20,-24"
+                IsPassword="True"
                 Placeholder="Пароль" />
         </Frame>
         <Frame BorderColor="#000">
             <Entry
                 x:Name="PassConfirmRegEntry"
+                IsPassword="True"
                 Margin="-20,-24"
                 Placeholder="Пароль" />
         </Frame>

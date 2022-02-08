@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App5XamarinMob.Models;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +12,8 @@ namespace App5XamarinMob
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditProjectPage : ContentPage
     {
-        Project project;
+        readonly Project project;
+
         public EditProjectPage(Project proj)
         {
             project = proj;
@@ -56,6 +56,7 @@ namespace App5XamarinMob
         private async void EditBtn_Clicked(object sender, EventArgs e)
         {
             bool result = await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "Ok", "Отмена");
+
             if (result)
             {
                 project.Name = ProjectNameTxt.Text;

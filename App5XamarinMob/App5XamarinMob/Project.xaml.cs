@@ -12,7 +12,7 @@ namespace App5XamarinMob
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjectPage : TabbedPage
     {
-        Project project;
+        readonly Project project;
         public static string Name;
 
         protected override void OnAppearing()

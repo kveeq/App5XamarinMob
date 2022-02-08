@@ -36,6 +36,7 @@ namespace App5XamarinMob
             {
                 await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
             }
+
             await Navigation.PopAsync();
 
         }

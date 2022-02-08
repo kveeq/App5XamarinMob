@@ -8,15 +8,20 @@ namespace App5XamarinMob.db
 {
     public class CRUDOperation
     {
-        SQLiteConnection db;
+        readonly SQLiteConnection db;
         public CRUDOperation(string databasePath)
         {
             db = new SQLiteConnection(databasePath);
             db.CreateTable<Project>();
+            db.CreateTable<Client>();
         }
         public IEnumerable<Project> GetProjects()
         {
             return db.Table<Project>();
+        }
+        public IEnumerable<Client> GetClients()
+        {
+            return db.Table<Client>();
         }
 
         public Project GetProjectItem(int id)
@@ -39,5 +44,10 @@ namespace App5XamarinMob.db
             }
         }
 
+        public int SaveClient(Client projectModel)
+        {
+            return db.Insert(projectModel);
+
+        }
     }
 }
