@@ -6,12 +6,13 @@
 
     <NavigationPage.TitleView>
         <Label
-            Padding="70,0"
             FontSize="21"
             Text="Регистрация"
             TextColor="White"
-            VerticalOptions="CenterAndExpand" />
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand"/>
     </NavigationPage.TitleView>
+
 
     <StackLayout Padding="50,30" Spacing="40">
         <Entry

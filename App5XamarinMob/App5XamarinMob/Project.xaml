@@ -15,25 +15,14 @@
                 Text="{x:Static locala:ProjectPage.Name}"
                 TextColor="White"
                 VerticalOptions="CenterAndExpand" />
-            <!--<ImageButton
-                x:Name="ProjectEditNavBtn"
-                Margin="0,0,19,0"
-                Aspect="AspectFit"
-                BackgroundColor="Transparent"
-                Clicked="ProjectEditNavBtn_Clicked"
-                HeightRequest="20"
-                VerticalOptions="End"
-                HorizontalOptions="End"
-                Source="Editor.png"
-                WidthRequest="20" />-->
-
             <Label
                 Margin="0,0,19,0"
                 FontFamily="MaterialIconsFont"
                 FontSize="31"
                 HorizontalOptions="End"
                 Text="&#xe3c9;"
-                TextColor="White">
+                TextColor="White"
+                VerticalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>

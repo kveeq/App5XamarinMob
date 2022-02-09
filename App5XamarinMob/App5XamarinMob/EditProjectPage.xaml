@@ -61,7 +61,7 @@
                 x:Name="AddressTxt"
                 BackgroundColor="LightGray"
                 Placeholder="Адрес" />
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,50">
                 <Button
                     x:Name="CancelBtn"
                     BackgroundColor="DeepSkyBlue"
