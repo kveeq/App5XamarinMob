@@ -4,7 +4,7 @@ using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "MaterialIconsFont")]
+[assembly: ExportFont("MaterialIcons-Regular (2).ttf", Alias = "MaterialIconsFont")]
 namespace App5XamarinMob
 {
     public partial class App : Application

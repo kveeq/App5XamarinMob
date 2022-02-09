@@ -3,44 +3,47 @@
     x:Class="App5XamarinMob.Login"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:App5XamarinMob" Visual="Material">
-    <StackLayout Margin="30,20" Spacing="50" VerticalOptions="Start">
+    xmlns:local="clr-namespace:App5XamarinMob"
+    Visual="Material">
+    <StackLayout
+        Margin="30,20"
+        Spacing="50"
+        VerticalOptions="Start">
         <Image
             x:Name="IconLoginImg"
             Margin="0,0,0,20"
             Aspect="AspectFit"
             Scale="0.9"
             Source="Resources/image.png" />
-        <StackLayout Spacing="50">
-            <Frame BorderColor="#000">
-                <Entry
-                    x:Name="LoginEntry"
-                    Margin="-20,-25"
-                    Placeholder="Логин"
-                    VerticalOptions="CenterAndExpand" />
-            </Frame>
-            <Frame BorderColor="#000">
-                <Entry
-                    x:Name="PasswordEntry"
-                    Margin="-20,-25"
-                    Placeholder="Пароль"
-                    VerticalOptions="CenterAndExpand" />
-            </Frame>
+        <StackLayout Spacing="30">
+            <Entry
+                x:Name="LoginEntry"
+                BackgroundColor="LightGray"
+                Placeholder="Логин"
+                VerticalOptions="CenterAndExpand" />
+            <Entry
+                x:Name="PasswordEntry"
+                BackgroundColor="LightGray"
+                IsPassword="True"
+                Placeholder="Пароль"
+                VerticalOptions="CenterAndExpand" />
         </StackLayout>
         <StackLayout Orientation="Horizontal" VerticalOptions="End">
             <Button
                 x:Name="RigistrationPageBtn"
-                CornerRadius="20"
                 BackgroundColor="DeepSkyBlue"
                 Clicked="RigistrationPageBtn_Clicked"
+                CornerRadius="30"
+                HeightRequest="50"
                 HorizontalOptions="Start"
                 Text="Зарегистрироваться" />
             <Button
                 x:Name="LoginBtn"
-                CornerRadius="20"
                 BackgroundColor="DeepSkyBlue"
                 Clicked="LoginBtn_Clicked"
-                HorizontalOptions="End"
+                CornerRadius="30"
+                HeightRequest="50"
+                HorizontalOptions="EndAndExpand"
                 Text="Войти" />
         </StackLayout>
     </StackLayout>

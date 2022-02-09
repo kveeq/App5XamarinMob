@@ -6,12 +6,13 @@
     Visual="Material">
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
+            <!--  изменения  -->
             <Label
                 FontSize="21"
                 HorizontalOptions="CenterAndExpand"
                 Text="Проекты"
                 TextColor="White" />
-            <ImageButton
+            <!--<ImageButton
                 Margin="0,0,19,0"
                 Aspect="AspectFit"
                 BackgroundColor="Transparent"
@@ -19,7 +20,18 @@
                 HeightRequest="30"
                 HorizontalOptions="End"
                 Source="add.png"
-                WidthRequest="30" />
+                WidthRequest="30" />-->
+            <Label
+                Margin="0,0,19,0"
+                FontFamily="MaterialIconsFont"
+                FontSize="31"
+                HorizontalOptions="End"
+                Text="&#xe145;"
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
     <StackLayout>

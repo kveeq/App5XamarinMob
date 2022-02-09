@@ -37,9 +37,13 @@ namespace App5XamarinMob
             TelephoneNumberLbl1.Text = project.TelephoneNumber1;
         }
 
-        private void ProjectEditNavBtn_Clicked(object sender, EventArgs e)
+        //private void ProjectEditNavBtn_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PushAsync(new EditProjectPage(project));
+        //}
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new EditProjectPage(project));
+            await Navigation.PushAsync(new EditProjectPage(project));
         }
     }
 }

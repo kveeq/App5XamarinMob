@@ -13,39 +13,34 @@
             VerticalOptions="CenterAndExpand" />
     </NavigationPage.TitleView>
 
-    <StackLayout Padding="50,30" Spacing="60">
-        <Frame BorderColor="#000">
-            <Entry
-                x:Name="EmailRegEntry"
-                Margin="-20,-24"
-                Placeholder="E-mail" />
-        </Frame>
-        <Frame BorderColor="#000">
-            <Entry
+    <StackLayout Padding="50,30" Spacing="40">
+        <Entry
                 x:Name="LoginRegEntry"
-                Margin="-20,-24"
+                BackgroundColor="LightGray"
                 Placeholder="Логин" />
-        </Frame>
-        <Frame BorderColor="#000">
-            <Entry
+        <Entry
+                x:Name="EmailRegEntry"
+                BackgroundColor="LightGray"
+                Placeholder="E-mail" />
+        <Entry
                 x:Name="PassRegEntry"
-                Margin="-20,-24"
+                BackgroundColor="LightGray"
                 IsPassword="True"
                 Placeholder="Пароль" />
-        </Frame>
-        <Frame BorderColor="#000">
-            <Entry
+        <Entry
                 x:Name="PassConfirmRegEntry"
+                BackgroundColor="LightGray"
                 IsPassword="True"
-                Margin="-20,-24"
                 Placeholder="Пароль" />
-        </Frame>
         <Button
             x:Name="RegBtn"
             Clicked="RegBtn_Clicked"
             BackgroundColor="DeepSkyBlue"
             CornerRadius="20"
+            HeightRequest="60"
             Text="Зарегистрироваться"
-            TextTransform="None" />
+            TextTransform="None" 
+            VerticalOptions="End"
+            Margin="0,0,0,50"/>
     </StackLayout>
 </ContentPage>

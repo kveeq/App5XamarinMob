@@ -7,13 +7,13 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label
-                Padding="70,0"
                 FontSize="21"
                 Text="Изменить проект"
                 TextColor="White"
                 TextTransform="None"
-                VerticalOptions="CenterAndExpand" />
-            <ImageButton
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"/>
+            <!--<ImageButton
                 x:Name="ProjectDeleteNavBtn"
                 Margin="0,0,10,0"
                 Aspect="AspectFit"
@@ -22,7 +22,20 @@
                 HeightRequest="20"
                 HorizontalOptions="End"
                 Source="Delete.png"
-                WidthRequest="20" />
+                WidthRequest="20" />-->
+            <Label
+                Margin="0,0,19,0"
+                FontFamily="MaterialIconsFont"
+                FontSize="31"
+                HorizontalOptions="End"
+                VerticalOptions="CenterAndExpand"
+                Text="&#xe872;"
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
         </StackLayout>
     </NavigationPage.TitleView>
     <ScrollView Margin="0,30">

@@ -30,9 +30,10 @@ namespace App5XamarinMob
             AddressTxt.Text = project.Address;
         }
 
-        private async void ProjectDeleteNavBtn_Clicked(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            bool result = await DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "Ок", "Отмена");
+            bool result = await DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "УДАЛИТЬ", "ОТМЕНА");
+
             if (result)
             {
                 try
@@ -43,7 +44,6 @@ namespace App5XamarinMob
                 {
                     await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
                 }
-
                 await Navigation.PopAsync();
             }
         }
@@ -55,7 +55,7 @@ namespace App5XamarinMob
 
         private async void EditBtn_Clicked(object sender, EventArgs e)
         {
-            bool result = await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "Ok", "Отмена");
+            bool result = await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "ИЗМЕНИТЬ", "ОТМЕНА");
 
             if (result)
             {

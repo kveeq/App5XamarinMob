@@ -28,14 +28,15 @@ namespace App5XamarinMob
             base.OnAppearing();
         }
 
-        //private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        //{
-        //    await DisplayAlert("Alert", "Tapped", "OK");
-        //    //List.Projects.Add(new Project($"Проект{List.Projects.Count + 1}", $"Description{List.Projects.Count + 1}", "89047182492", "89047182402", "qwerty@mail.com", "Kazan"));
-        //    //UpdateList();
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            //await DisplayAlert("Alert", "Tapped", "OK");
+            //List.Projects.Add(new Project($"Проект{List.Projects.Count + 1}", $"Description{List.Projects.Count + 1}", "89047182492", "89047182402", "qwerty@mail.com", "Kazan"));
+            //UpdateList();
 
-        //    await Navigation.PushAsync(new AddProjectPage());
-        //}
+            await Navigation.PushAsync(new AddProjectPage()); await Navigation.PushAsync(new AddProjectPage());
+
+        }
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
