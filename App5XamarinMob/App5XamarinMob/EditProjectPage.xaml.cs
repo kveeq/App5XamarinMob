@@ -1,25 +1,55 @@
-﻿//yjdfz new
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App5XamarinMob.Models;
-using App5XamarinMob.db;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
-using System.IO;
 
 namespace App5XamarinMob
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddProjectPage : ContentPage
+    public partial class EditProjectPage : ContentPage
     {
+        readonly Project project;
         private string path;
-        public AddProjectPage()
+
+        public EditProjectPage(Project proj)
         {
+            project = proj;
             InitializeComponent();
+            FillFields();
+        }
+
+        public void FillFields()
+        {
+            ProjectNameTxt.Text = project.Name;
+            ProjectDescriptionTxt.Text = project.Description;
+            TelNumber1Txt.Text = project.TelephoneNumber1;
+            EmailTxt.Text = project.Email;
+            AddressTxt.Text = project.Address;
+            img.Source = project.ImagePath;
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            bool result = await DisplayAlert("Изменение", $"Вы точно хотите удалить {project.Name}?", "УДАЛИТЬ", "ОТМЕНА");
+
+            if (result)
+            {
+                try
+                {
+                    App.db.DelProj(project.Id);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+                }
+                await Navigation.PopAsync();
+            }
         }
 
         private async void CancelBtn_Clicked(object sender, EventArgs e)
@@ -27,20 +57,31 @@ namespace App5XamarinMob
             await Navigation.PopAsync();
         }
 
-        private async void AddBtn_Clicked(object sender, EventArgs e)
+        private async void EditBtn_Clicked(object sender, EventArgs e)
         {
-            //List.Projects.Add(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
+            bool result = await DisplayAlert("Изменение", $"Вы точно хотите изменить {project.Name}?", "ИЗМЕНИТЬ", "ОТМЕНА");
 
-            try
+            if (result)
             {
-                App.db.SaveItem(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text, path));
+                project.Name = ProjectNameTxt.Text;
+                project.Description = ProjectDescriptionTxt.Text;
+                project.TelephoneNumber1 = TelNumber1Txt.Text;
+                project.Address = AddressTxt.Text;
+                project.Email = EmailTxt.Text;
+                if (path != null)
+                    project.ImagePath = path;
+
+                try
+                {
+                    App.db.SaveItem(project);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+                }
+
                 await Navigation.PopAsync();
             }
-            catch
-            {
-                await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
-            }
-
         }
         async void TakePhotoAsync(object sender, EventArgs e)
         {

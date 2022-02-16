@@ -4,27 +4,42 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:App5XamarinMob.TabbedPages"
-    xmlns:locala="clr-namespace:App5XamarinMob" Visual="Material">
+    xmlns:locala="clr-namespace:App5XamarinMob"
+    Visual="Material">
 
     <NavigationPage.TitleView>
-        <Label
-            Padding="70,0"
-            FontSize="21"
-            Text="{x:Static locala:ProjectPage.Name}"
-            TextColor="White"
-            VerticalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Horizontal">
+            <Label
+                FontSize="21"
+                HorizontalOptions="CenterAndExpand"
+                Text="{x:Static locala:ProjectPage.Name}"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Margin="0,0,19,0"
+                FontFamily="MaterialIconsFont"
+                FontSize="31"
+                HorizontalOptions="End"
+                Text="&#xe3c9;"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage Title="О проекте">
-        <ScrollView Padding="0, 0">
+        <ScrollView Padding="0,0">
             <StackLayout>
                 <Label
                     Padding="20"
                     FontAttributes="Bold"
-                    TextColor="Black"
                     FontSize="18"
                     HorizontalOptions="CenterAndExpand"
                     Text="Описание:"
+                    TextColor="Black"
                     TextTransform="Uppercase"
                     VerticalOptions="Start" />
                 <Label
@@ -81,31 +96,16 @@
     </ContentPage>
 
     <ContentPage Title="Контакты">
-        <StackLayout Margin="50">
-            <StackLayout>
-                <Label Text="Телефон" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="TelephoneNumberLbl1" />
-                </Frame>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Телефон" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="TelephoneNumberLbl2" />
-                </Frame>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Email" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="EmailLbl" />
-                </Frame>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Адрес" />
-                <Frame BackgroundColor="LightGray" BorderColor="#000">
-                    <Label x:Name="AddressLbl" />
-                </Frame>
-            </StackLayout>
+        <StackLayout Margin="50" Spacing="30">
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="TelephoneNumberLbl1" />
+            </Frame>
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="EmailLbl" />
+            </Frame>
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="AddressLbl" />
+            </Frame>
         </StackLayout>
     </ContentPage>
 

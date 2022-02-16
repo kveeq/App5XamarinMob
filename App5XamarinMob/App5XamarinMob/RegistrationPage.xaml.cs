@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App5XamarinMob.Models;
 
 namespace App5XamarinMob
 {
@@ -19,7 +20,16 @@ namespace App5XamarinMob
 
         private async void RegBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+            try
+            {
+                if (PassRegEntry.Text == PassConfirmRegEntry.Text)
+                    App.Db.SaveClient(new Client(EmailRegEntry.Text, LoginRegEntry.Text, PassRegEntry.Text));
+                await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+            }
+            catch
+            {
+                await DisplayAlert("Уведомление", "Не удалось зарегистрироваться", "Ok");
+            }
         }
     }
 }

@@ -12,8 +12,14 @@ namespace App5XamarinMob
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjectPage : TabbedPage
     {
-        Project project;
+        readonly Project project;
         public static string Name;
+
+        protected override void OnAppearing()
+        {
+            FillInfo();
+            base.OnAppearing();
+        }
 
         public ProjectPage(Project project)
         {
@@ -28,8 +34,13 @@ namespace App5XamarinMob
             ProjectDescriptionLbl.Text = project.Description;
             AddressLbl.Text = project.Address;
             EmailLbl.Text = project.Email;
-            TelephoneNumberLbl2.Text = project.TelephoneNumber2;
             TelephoneNumberLbl1.Text = project.TelephoneNumber1;
+            Img1.Source = project.ImagePath;
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditProjectPage(project));
         }
     }
 }
