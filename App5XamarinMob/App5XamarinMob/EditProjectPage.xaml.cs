@@ -21,6 +21,7 @@ namespace App5XamarinMob
             FillFields();
         }
 
+
         public void FillFields()
         {
             ProjectNameTxt.Text = project.Name;
