@@ -1,4 +1,4 @@
-![JitPack](https://img.shields.io/jitpack/v/github/jitpack/maven-simple?color=green&label=Release)
+![JitPack](https://img.shields.io/jitpack/v/github/jitpack/maven-simple?color=green&label=Alpha)
 
 # Кросс-платформенное приложение APLUS 
 ## Написано на языке программирования **C#** на фреймворке **Xamarin**
