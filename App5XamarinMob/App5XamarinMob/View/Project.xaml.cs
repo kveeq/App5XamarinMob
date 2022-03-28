@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App5XamarinMob.Models;
+using App5XamarinMob.ViewModel;
 
 namespace App5XamarinMob
 {
@@ -21,11 +22,10 @@ namespace App5XamarinMob
             base.OnAppearing();
         }
 
-        public ProjectPage(Project project)
+        public ProjectPage(ProjectViewModel project)
         {
-            this.project = project;
-            Name = project.Name;
             InitializeComponent();
+            BindingContext = project;
             FillInfo();
         }
 

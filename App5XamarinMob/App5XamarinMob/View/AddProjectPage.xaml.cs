@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System.IO;
+using App5XamarinMob.ViewModel;
 
 namespace App5XamarinMob
 {
@@ -17,9 +18,10 @@ namespace App5XamarinMob
     public partial class AddProjectPage : ContentPage
     {
         private string path;
-        public AddProjectPage()
+        public AddProjectPage(ProjectViewModel projectViewModel)
         {
             InitializeComponent();
+
         }
 
         private async void CancelBtn_Clicked(object sender, EventArgs e)
