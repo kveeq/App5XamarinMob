@@ -32,7 +32,7 @@
                 TextColor="White"
                 VerticalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    <TapGestureRecognizer  />
                 </Label.GestureRecognizers>
             </Label>
 
@@ -71,7 +71,6 @@
                         <Button
                             x:Name="AddImageGalBtn"
                             BackgroundColor="DeepSkyBlue"
-                            Clicked="AddImageBtn_Clicked"
                             CornerRadius="20"
                             HeightRequest="50"
                             HorizontalOptions="FillAndExpand"
@@ -80,7 +79,6 @@
                         <Button
                             x:Name="AddImageCamBtn"
                             BackgroundColor="DeepSkyBlue"
-                            Clicked="TakePhotoAsync"
                             CornerRadius="20"
                             HeightRequest="50"
                             HorizontalOptions="FillAndExpand"
@@ -92,7 +90,6 @@
                     <Button
                         x:Name="CancelBtn"
                         BackgroundColor="DeepSkyBlue"
-                        Clicked="CancelBtn_Clicked"
                         CornerRadius="20"
                         HeightRequest="50"
                         HorizontalOptions="Start"
@@ -101,7 +98,6 @@
                     <Button
                         x:Name="EditBtn"
                         BackgroundColor="DeepSkyBlue"
-                        Clicked="EditBtn_Clicked"
                         CornerRadius="20"
                         HeightRequest="50"
                         HorizontalOptions="EndAndExpand"

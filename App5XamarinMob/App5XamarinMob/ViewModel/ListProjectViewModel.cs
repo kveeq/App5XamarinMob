@@ -27,7 +27,7 @@ namespace App5XamarinMob.ViewModel
             Projects = new ObservableCollection<ProjectViewModel>();
             foreach(var item in App.db.GetProjects())
             {
-                Projects.Add(new ProjectViewModel { Project = item }); ;
+                Projects.Add(new ProjectViewModel { Project = item, Navigation = Navigation}); ;
             }
             CreateStudentCommand = new Command(CreateStudent);
             BackCommand = new Command(Back);
@@ -55,7 +55,7 @@ namespace App5XamarinMob.ViewModel
 
         private void CreateStudent()
         {
-            Navigation.PushAsync(new AddProjectPage(new ProjectViewModel()));
+            Navigation.PushAsync(new AddProjectPage(new AddProjectViewModel()));
         }
         private void Back()
         {
