@@ -15,10 +15,13 @@ namespace App5XamarinMob
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditProjectPage : ContentPage
     {
+        public EditProjectViewModel ViewModel { get; private set; }
+
         public EditProjectPage(EditProjectViewModel proj)
         {
             InitializeComponent();
-            BindingContext = proj;
+            ViewModel = proj;
+            this.BindingContext = proj;
         }
     }
 }

@@ -14,9 +14,13 @@ namespace App5XamarinMob.ViewModel
     public class EditProjectViewModel : INotifyPropertyChanged
     {
         public Project Projects { get; set; }
-        ProjectViewModel ProjectViewModel { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
         public ICommand SaveCommand { protected set; get; }
         public ICommand TakePhotoCommand { protected set; get; }
         public ICommand DoPhotoCommand { protected set; get; }
@@ -94,12 +98,12 @@ namespace App5XamarinMob.ViewModel
             }
         }
 
-        private async void CancelBtn()
+        public async void CancelBtn()
         {
             await Navigation.PopAsync();
         }
 
-        private async void Delete()
+        public async void Delete()
         {
             try
             {
@@ -109,17 +113,18 @@ namespace App5XamarinMob.ViewModel
             {
 
             }
-            await Navigation.PopAsync();
+            //await Navigation.PopAsync();
         }
 
-        private async void AddBtn()
+        public async void AddBtn()
         {
             //List.Projects.Add(new Project(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
 
             try
             {
-                App.db.SaveItem(Projects);
-                await Navigation.PopAsync();
+               
+                App.db.SaveItem(new Project(Projects.Name, Projects.Description, Projects.TelephoneNumber1, Projects.Email, Projects.Address, Projects.ImagePath));
+                //await Navigation.PopAsync();
             }
             catch
             {
@@ -127,7 +132,7 @@ namespace App5XamarinMob.ViewModel
             }
 
         }
-        async void TakePhotoAsync()
+        public async void TakePhotoAsync()
         {
             try
             {
@@ -151,7 +156,7 @@ namespace App5XamarinMob.ViewModel
             }
         }
 
-        private async void AddImageBtn()
+        public async void AddImageBtn()
         {
             try
             {
@@ -170,12 +175,6 @@ namespace App5XamarinMob.ViewModel
             {
                 throw new Exception("Сообщение об ошибке" + ex.Message + "OK");
             }
-        }
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

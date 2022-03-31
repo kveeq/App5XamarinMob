@@ -14,7 +14,7 @@ namespace App5XamarinMob.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand EditTapCommand { protected set; get; }
-        public INavigation Navigation { get; set; }
+        public INavigation Navigation { get; set; } 
 
         public ProjectViewModel() 
         {
@@ -24,8 +24,8 @@ namespace App5XamarinMob.ViewModel
 
         private async void Edit()
         {
-            EditProjectViewModel viewModel = new EditProjectViewModel() { Projects = Project};
-            await Navigation.PushAsync(new EditProjectPage(viewModel));
+            //ProjectViewModel viewModel = new ProjectViewModel() {Pro = this.Project };
+            await Navigation.PushAsync(new EditProjectPage(new EditProjectViewModel { Projects = Project, Navigation = this.Navigation })) ;
         }
 
         public string Name
@@ -36,6 +36,11 @@ namespace App5XamarinMob.ViewModel
                 Project.Name = value;
                 OnPropertyChanged("Name");
             }
+        }
+
+        public int Id
+        {
+            get { return Project.Id; }
         }
 
         public string Addres
