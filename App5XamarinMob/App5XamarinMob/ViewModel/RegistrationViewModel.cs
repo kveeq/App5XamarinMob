@@ -77,7 +77,7 @@ namespace App5XamarinMob.ViewModel
             }
             catch
             {
-                throw new Exception("Уведомление Не удалось зарегистрироваться");
+                await App.Current.MainPage.DisplayAlert("Уведомление", "Не удалось зарегистрироваться", "Ok");
             }
         }
     }

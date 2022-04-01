@@ -32,7 +32,7 @@
                 TextColor="White"
                 VerticalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="{Binding DeleteCommand}" />
+                    <TapGestureRecognizer Command="{Binding DeleteCommand}" CommandParameter="{Binding}"/>
                 </Label.GestureRecognizers>
             </Label>
 

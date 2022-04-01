@@ -113,7 +113,7 @@ namespace App5XamarinMob.ViewModel
             {
 
             }
-            //await Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
 
         public async void AddBtn()
@@ -124,11 +124,11 @@ namespace App5XamarinMob.ViewModel
             {
                
                 App.db.SaveItem(new Project(Projects.Name, Projects.Description, Projects.TelephoneNumber1, Projects.Email, Projects.Address, Projects.ImagePath));
-                //await Navigation.PopAsync();
+                await Navigation.PopAsync();
             }
             catch
             {
-                throw new Exception("Error Загрузка в базу данных неуспешно Ok");
+                await App.Current.MainPage.DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
             }
 
         }
@@ -152,7 +152,7 @@ namespace App5XamarinMob.ViewModel
             }
             catch (Exception ex)
             {
-                throw new Exception("Сообщение об ошибке" + ex.Message + "OK");
+                await App.Current.MainPage.DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
 
@@ -173,7 +173,7 @@ namespace App5XamarinMob.ViewModel
             }
             catch (Exception ex)
             {
-                throw new Exception("Сообщение об ошибке" + ex.Message + "OK");
+                await App.Current.MainPage.DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
     }

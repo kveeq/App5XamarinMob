@@ -24,7 +24,6 @@ namespace App5XamarinMob.ViewModel
 
         private async void Edit()
         {
-            //ProjectViewModel viewModel = new ProjectViewModel() {Pro = this.Project };
             await Navigation.PushAsync(new EditProjectPage(new EditProjectViewModel { Projects = Project, Navigation = this.Navigation })) ;
         }
 

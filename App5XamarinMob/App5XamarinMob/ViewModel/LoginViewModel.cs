@@ -71,7 +71,7 @@ namespace App5XamarinMob.ViewModel
             }
 
             if (!state)
-                throw new Exception("Уведомление Не правилный логин или пароль");
+               await App.Current.MainPage.DisplayAlert("Уведомление", "Не правилный логин или пароль", "Ok");
         }
     }
 }

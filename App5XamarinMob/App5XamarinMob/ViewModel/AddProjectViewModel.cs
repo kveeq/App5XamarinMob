@@ -106,7 +106,7 @@ namespace App5XamarinMob.ViewModel
             }
             catch
             {
-                throw new Exception("Error Загрузка в базу данных неуспешно Ok");
+                await App.Current.MainPage.DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
             }
 
         }
@@ -130,7 +130,7 @@ namespace App5XamarinMob.ViewModel
             }
             catch (Exception ex)
             {
-                throw new Exception("Сообщение об ошибке" + ex.Message +"OK");
+                await App.Current.MainPage.DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
 
@@ -151,7 +151,7 @@ namespace App5XamarinMob.ViewModel
             }
             catch (Exception ex)
             {
-                throw new Exception("Сообщение об ошибке" + ex.Message + "OK");
+                await App.Current.MainPage.DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
 
