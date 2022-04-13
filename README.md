@@ -29,4 +29,4 @@ ___
 #### Практика 1 - 1660856496b2487f669080aa6b68f54135fd20d5 (1 sprint release) 
 #### Практика 2 - d7e15f1d317958843acbcdb8aff0a2f2972cda2f (Update interface)
 #### Практика 3 - b51ad3e1ab1b3539d7514626ddc117a4dacb7d60 (do an image adding and editting)
-#### Практика 4 - a1b0cae099f6a5e354b015ccd41db5d3a6aef0ea (update code)
+#### Практика 6 - a1b0cae099f6a5e354b015ccd41db5d3a6aef0ea (update code)
