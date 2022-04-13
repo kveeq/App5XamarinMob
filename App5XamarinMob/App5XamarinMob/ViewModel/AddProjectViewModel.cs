@@ -18,7 +18,7 @@ namespace App5XamarinMob.ViewModel
         public ICommand SaveCommand { protected set; get; }
         public ICommand TakePhotoCommand { protected set; get; }
         public ICommand DoPhotoCommand { protected set; get; }
-        public ICommand CanselCommand { protected set; get; }
+        public ICommand CanselCommand { protected set; get; } 
         public INavigation Navigation { get; set; }
 
         public AddProjectViewModel()

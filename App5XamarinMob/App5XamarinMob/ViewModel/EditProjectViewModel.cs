@@ -123,7 +123,7 @@ namespace App5XamarinMob.ViewModel
             try
             {
                
-                App.db.SaveItem(new Project(Projects.Name, Projects.Description, Projects.TelephoneNumber1, Projects.Email, Projects.Address, Projects.ImagePath));
+                App.db.SaveItem(Projects);
                 await Navigation.PopAsync();
             }
             catch
